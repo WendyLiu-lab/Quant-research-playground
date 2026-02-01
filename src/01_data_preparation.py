@@ -175,29 +175,3 @@ else:
 
 
 
-
-
-
-#%% -------------------- 快速驗證（可選） ----------------------------------------------------
-# 驗證 2023/01 的近月切換是否符合預期（例如 1/30 為實際 LTD）
-# if not combined.empty:
-#     print("\n近月月份分佈：")
-#     print(combined.groupby("近月yyyymm")["近月yyyymm"].count())
-
-#     print("\n成交日期 × 近月月份（前 10 筆）：")
-#     print(combined[["成交日期", "到期月份(週別)", "近月yyyymm"]].head(10))
-
-# # %%
-# if not combined.empty:
-#     grouped = (
-#         combined
-#         .groupby(["成交日期", "到期月份(週別)", "近月yyyymm"], as_index=False)
-#         ["成交數量(B+S)"].sum()
-#         .rename(columns={"成交數量(B+S)": "成交數量(B+S)_總和"})
-#     )
-#     print(grouped)
-# else:
-#     print("⚠️ combined 為空，無法分組統計。")
-# # %%
-# combined.groupby("近月yyyymm")["成交日期"].agg(["min","max"])
-# %%
