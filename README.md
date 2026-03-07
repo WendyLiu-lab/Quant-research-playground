@@ -1,4 +1,4 @@
-# Quant Research Playground  
+# Quant Research Playground
 
 This repository contains personal quantitative research experiments focused on **market microstructure signals, machine learning trading strategies, and systematic strategy prototyping**.
 
@@ -20,23 +20,21 @@ Model predictions are transformed into a **ranking-based trading strategy**, fol
 
 本研究探討 **成交資料所計算的 Order Flow Imbalance（OFI）** 是否能預測期貨市場短期價格方向。
 
-研究使用 **台灣期交所小型台指期貨（MTX）2017–2023 逐筆成交資料**，  
-建構 OFI 微結構特徵，並透過 **XGBoost 多分類模型** 預測未來 1 分鐘價格方向，  
-將預測訊號轉換為 **排名式交易策略** 並進行回測與樣本外驗證。
+研究使用 **台灣期交所小型台指期貨（MTX）2017–2023 逐筆成交資料**，建構 OFI 微結構特徵，並透過 **XGBoost 多分類模型** 預測未來 1 分鐘價格方向，將預測訊號轉換為 **排序式交易策略** 並進行回測與樣本外驗證。
 
-📄 Research Slides / 研究簡報  
+📄 **Research Slides / 研究簡報**  
 [OFI Short Horizon ML Strategy](./ofi_short_horizon_ml_strategy.pdf)
 
 ---
 
-# Repository Structure  
+# Repository Structure
+
 Quant-research-playground/
 │
-├── ofi_short_horizon_ml_strategy.pdf # research presentation / 研究簡報
+├── ofi_short_horizon_ml_strategy.pdf   # research presentation / 研究簡報
 ├── README.md
 │
-├── data/ # datasets used in research / 研究資料
-├── src/ # research code (data processing, modeling, backtesting)
-│ # 資料處理、特徵工程、模型與回測程式
-├── results/ # backtest results and figures / 回測結果與圖表
-├── research_raw/ # raw research notes and materials / 研究過程筆記
+├── data/          # datasets used in research / 研究資料
+├── src/           # research code (data processing, modeling, backtesting)
+├── results/       # backtest results and figures / 回測結果與圖表
+├── research_raw/  # raw research notes and materials / 研究過程筆記
