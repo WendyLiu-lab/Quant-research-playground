@@ -30,6 +30,12 @@ Model predictions are transformed into a **ranking-based trading strategy**, fol
 
 ---
 
+# Research Project
+研究專案
+
+## Trade-based Order Flow Imbalance: A Short-Horizon Machine Learning Trading Strategy
+主動買賣力不平衡（OFI）之短週期機器學習交易策略研究
+
 
 ---
 
