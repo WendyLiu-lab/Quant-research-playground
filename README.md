@@ -22,6 +22,14 @@ Model predictions are transformed into a **ranking-based trading strategy**, fol
 
 研究使用 **台灣期交所小型台指期貨（MTX）2017–2023 逐筆成交資料**，建構 OFI 微結構特徵，並透過 **XGBoost 多分類模型** 預測未來 1 分鐘價格方向，將預測訊號轉換為 **排序式交易策略** 並進行回測與樣本外驗證。
 
+---
+
+📄 Research Presentation  
+
+[OFI Short Horizon Machine Learning Trading Strategy](./OFI_short_horizon_ml_strategy.pdf)
+
+---
+
 
 ---
 
@@ -29,7 +37,7 @@ Model predictions are transformed into a **ranking-based trading strategy**, fol
 ```
 Quant-research-playground/
 │
-├── Trade-based Order Flow Imbalance A Short-Horizon Machine Learning Trading Strategy.pdf   # research presentation / 研究簡報
+├── OFI_short_horizon_ml_strategy.pdf   # research presentation / 研究簡報
 ├── README.md
 │
 ├── data/          # datasets used in research / 研究資料
