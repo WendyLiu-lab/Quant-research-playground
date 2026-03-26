@@ -1,38 +1,58 @@
 # Quant Research Playground
 
-This repository contains personal quantitative research experiments focused on **market microstructure signals, machine learning trading strategies, and systematic strategy prototyping**.
-
-本 repo 用於整理個人量化研究實驗，主要探討市場微結構訊號、機器學習交易策略與短週期 alpha 訊號的可能性。
+This repository contains personal quantitative research focused on **market microstructure signals, machine learning-based trading strategies, and short-horizon alpha exploration**.
 
 ---
 
-📄 Research Presentation  
+## 📄 Research Presentation  
 
-[OFI Short Horizon Machine Learning Trading Strategy](./OFI_short_horizon_ml_strategy.pdf)
+[OFI Short Horizon Machine Learning Trading Strategy](./OFI_short_horizon_ml_strategy.pdf)  
+*(Full presentation is written in Chinese; key ideas are summarized below in English.)*
 
 ---
 
+## Trade-based Order Flow Imbalance (OFI):  
+### A Short-Horizon Machine Learning Trading Strategy
 
-# Research Project  
-研究專案
+### Overview
 
-## Trade-based Order Flow Imbalance: A Short-Horizon Machine Learning Trading Strategy  
-主動買賣力不平衡（OFI）之短週期機器學習交易策略研究
+This project investigates whether **trade-based Order Flow Imbalance (OFI)** contains predictive power for short-horizon price movements in Taiwan index futures.
 
-This study investigates whether **trade-based Order Flow Imbalance (OFI)** contains predictive information for short-horizon price movements in Taiwan index futures.
+Using **TAIFEX Mini Taiwan Index Futures (MTX) transaction data (2017–2023)**, I construct microstructure features and apply an **XGBoost model** to predict next 1-minute price direction.
 
-Using **TAIFEX Mini Taiwan Index Futures (MTX) transaction data (2017–2023)**, OFI-based microstructure features are constructed and used in an **XGBoost multi-class model** to predict the next 1-minute price direction.
+Model outputs are transformed into a **ranking-based trading strategy**, followed by backtesting and out-of-sample validation.
 
-Model predictions are transformed into a **ranking-based trading strategy**, followed by backtesting and out-of-sample validation.
+---
+
+### Key Components
+
+- OFI-based microstructure feature construction  
+- XGBoost model for short-horizon prediction  
+- Ranking-based signal selection (Top-K)  
+- Backtesting framework with transaction cost  
+- Time-based split for out-of-sample evaluation  
+
+---
+
+### Key Insights
+
+- Alpha signals are concentrated at very short horizons and decay rapidly  
+- Strategy performance is highly sensitive to ranking thresholds (Top-K selection)  
+- Transaction cost is an important consideration in real-world strategy performance  
+- Out-of-sample results suggest alpha exists but lacks stability  
+
+---
+
+## 中文說明（簡要）
 
 本研究探討 **成交資料所計算的 Order Flow Imbalance（OFI）** 是否能預測期貨市場短期價格方向。
 
-研究使用 **台灣期交所小型台指期貨（MTX）2017–2023 逐筆成交資料**，建構 OFI 微結構特徵，並透過 **XGBoost 多分類模型** 預測未來 1 分鐘價格方向，將預測訊號轉換為 **排序式交易策略** 並進行回測與樣本外驗證。
+研究使用 **台灣期交所小型台指期貨（MTX）2017–2023 逐筆成交資料**，建構 OFI 微結構特徵，並透過 **XGBoost 模型** 預測未來 1 分鐘價格方向，將預測訊號轉換為 **排序式交易策略** 並進行回測與樣本外驗證。
 
+---
 
+## Repository Structure
 
-
-# Repository Structure
 ```
 Quant-research-playground/
 │
